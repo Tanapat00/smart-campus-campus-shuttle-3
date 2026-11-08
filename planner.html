@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>วางแผนเดินทาง | Campus Shuttle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+  <header class="site-header">
+    <p class="brand">Campus Shuttle</p>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="routes.html">สายรถและจุดจอด</a></li>
+        <li><a href="timetable.html">ตารางเวลา</a></li>
+        <li><a href="planner.html" aria-current="page">วางแผนเดินทาง</a></li>
+        <li><a href="feedback.html">แจ้งปัญหา</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">โหมดมืด</button>
+  </header>
+  <main id="main">
+    <h1>วางแผนการเดินทาง</h1>
+
+    <p id="load-error" class="notice notice-error" role="alert" hidden></p>
+    <form id="plan-form" class="card" novalidate>
+      <div class="field">
+        <label for="from">ต้นทาง</label>
+        <select id="from" required><option value="">-- เลือกต้นทาง --</option></select>
+      </div>
+      <div class="field">
+        <label for="to">ปลายทาง</label>
+        <select id="to" required><option value="">-- เลือกปลายทาง --</option></select>
+      </div>
+      <p id="plan-error" class="error" role="alert" hidden></p>
+      <button type="submit" class="btn">ค้นหาเส้นทาง</button>
+    </form>
+    <section aria-labelledby="h-res">
+      <h2 id="h-res">ผลการค้นหา</h2>
+      <div id="plan-result" aria-live="polite"><p>เลือกต้นทางและปลายทาง แล้วกด "ค้นหาเส้นทาง"</p></div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <p>SC17332 Mini Project · กลุ่มที่ 8 Campus Shuttle · ข้อมูลเวลาเดินรถอาจเปลี่ยนแปลง โปรดตรวจสอบกับหน่วยงานที่ดูแล</p>
+  </footer>
+  <script type="module" src="js/planner.js"></script>
+</body>
+</html>

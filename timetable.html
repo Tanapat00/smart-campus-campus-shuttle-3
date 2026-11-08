@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ตารางเวลา | Campus Shuttle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+  <header class="site-header">
+    <p class="brand">Campus Shuttle</p>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="routes.html">สายรถและจุดจอด</a></li>
+        <li><a href="timetable.html" aria-current="page">ตารางเวลา</a></li>
+        <li><a href="planner.html">วางแผนเดินทาง</a></li>
+        <li><a href="feedback.html">แจ้งปัญหา</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">โหมดมืด</button>
+  </header>
+  <main id="main">
+    <h1>ตารางเวลาเต็ม</h1>
+
+    <p id="load-error" class="notice notice-error" role="alert" hidden></p>
+    <form id="tt-form" class="card" aria-label="ตัวเลือกตารางเวลา">
+      <div class="field">
+        <label for="route-select">สายรถ</label>
+        <select id="route-select"></select>
+      </div>
+      <fieldset>
+        <legend>ประเภทวัน</legend>
+        <label class="radio"><input type="radio" name="day" value="weekday"> วันธรรมดา</label>
+        <label class="radio"><input type="radio" name="day" value="weekend"> วันหยุด</label>
+      </fieldset>
+    </form>
+    <section aria-labelledby="h-tt">
+      <h2 id="h-tt">ตาราง</h2>
+      <p id="tt-note"></p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="h-tt">
+        <table id="tt-table"></table>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <p>SC17332 Mini Project · กลุ่มที่ 8 Campus Shuttle · ข้อมูลเวลาเดินรถอาจเปลี่ยนแปลง โปรดตรวจสอบกับหน่วยงานที่ดูแล</p>
+  </footer>
+  <script type="module" src="js/timetable.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สายรถและจุดจอด | Campus Shuttle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+  <header class="site-header">
+    <p class="brand">Campus Shuttle</p>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="routes.html" aria-current="page">สายรถและจุดจอด</a></li>
+        <li><a href="timetable.html">ตารางเวลา</a></li>
+        <li><a href="planner.html">วางแผนเดินทาง</a></li>
+        <li><a href="feedback.html">แจ้งปัญหา</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">โหมดมืด</button>
+  </header>
+  <main id="main">
+    <h1>สายรถและจุดจอด</h1>
+
+    <p id="load-error" class="notice notice-error" role="alert" hidden></p>
+    <p>กดที่ชื่อจุดจอดเพื่อดูเวลารถคันถัดไป</p>
+    <section aria-labelledby="h-list">
+      <h2 id="h-list">สายรถทั้งหมด</h2>
+      <div id="route-list" class="cards"></div>
+    </section>
+    <section aria-labelledby="h-sel">
+      <h2 id="h-sel">จุดจอดที่เลือก</h2>
+      <div id="stop-panel" class="card" aria-live="polite">
+        <p id="panel-empty">ยังไม่ได้เลือกจุดจอด</p>
+        <p class="card-title" id="panel-name" hidden></p>
+        <div id="panel-times"></div>
+        <div id="panel-fav"></div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <p>SC17332 Mini Project · กลุ่มที่ 8 Campus Shuttle · ข้อมูลเวลาเดินรถอาจเปลี่ยนแปลง โปรดตรวจสอบกับหน่วยงานที่ดูแล</p>
+  </footer>
+  <script type="module" src="js/routes.js"></script>
+</body>
+</html>

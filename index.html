@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>หน้าแรก | Campus Shuttle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+  <header class="site-header">
+    <p class="brand">Campus Shuttle</p>
+    <nav aria-label="เมนูหลัก">
+      <ul>
+        <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+        <li><a href="routes.html">สายรถและจุดจอด</a></li>
+        <li><a href="timetable.html">ตารางเวลา</a></li>
+        <li><a href="planner.html">วางแผนเดินทาง</a></li>
+        <li><a href="feedback.html">แจ้งปัญหา</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">โหมดมืด</button>
+  </header>
+  <main id="main">
+    <h1>เวลารถคันถัดไป</h1>
+
+    <p id="load-error" class="notice notice-error" role="alert" hidden></p>
+    <section aria-labelledby="h-find">
+      <h2 id="h-find">เลือกจุดจอด</h2>
+      <div class="field">
+        <label for="stop-select">จุดจอด</label>
+        <select id="stop-select"><option value="">-- เลือกจุดจอด --</option></select>
+      </div>
+      <div id="stop-panel" class="card" hidden>
+        <p class="card-title" id="panel-name"></p>
+        <div id="panel-times"></div>
+        <div id="panel-fav"></div>
+      </div>
+    </section>
+    <section aria-labelledby="h-fav">
+      <h2 id="h-fav">จุดจอดโปรดของฉัน</h2>
+      <p id="fav-empty" hidden>ยังไม่มีจุดจอดโปรด เลือกจุดจอดด้านบนแล้วกด "เพิ่มเป็นจุดโปรด"</p>
+      <div id="fav-list" class="cards"></div>
+    </section>
+    <section aria-labelledby="h-go">
+      <h2 id="h-go">ทางลัด</h2>
+      <ul class="shortcuts">
+        <li><a class="btn" href="planner.html">วางแผนการเดินทาง</a></li>
+        <li><a class="btn btn-ghost" href="timetable.html">ดูตารางเวลาเต็ม</a></li>
+        <li><a class="btn btn-ghost" href="feedback.html">แจ้งปัญหาการเดินรถ</a></li>
+      </ul>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <p>SC17332 Mini Project · กลุ่มที่ 8 Campus Shuttle · ข้อมูลเวลาเดินรถอาจเปลี่ยนแปลง โปรดตรวจสอบกับหน่วยงานที่ดูแล</p>
+  </footer>
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>
